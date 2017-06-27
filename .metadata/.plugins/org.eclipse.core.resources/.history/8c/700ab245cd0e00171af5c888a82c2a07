@@ -1,0 +1,30 @@
+package com.spring.web.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.spring.web.dao.Employee;
+import com.spring.web.dao.EmployeeDao;
+
+import java.util.List;
+
+@Service("employeeService")
+public class EmployeeService {
+	private EmployeeDao employeeDao;
+	
+	public void setEmployeeDao(EmployeeDao employeeDao) {
+		this.employeeDao = employeeDao;
+	}
+
+	
+	
+public EmployeeService(){
+	System.out.println(employeeDao.hashCode());
+}
+	
+	public List<Employee> getEmployees(){
+		return employeeDao.employeesDetails();
+		
+	}
+
+}

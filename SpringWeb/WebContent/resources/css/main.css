@@ -1,0 +1,9 @@
+@CHARSET "ISO-8859-1";
+
+.formtable{
+padding: 10px;
+border: 1px solid blue;
+}
+input[type-text] {
+	width: 100px;
+}
